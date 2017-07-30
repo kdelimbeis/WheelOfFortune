@@ -112,7 +112,7 @@ function beginGame() {
 }
 
 function seeRules() {
-    document.getElementsByClassName("rules")[0].addEventListener("click", style.display = "green")
+    document.getElementById("rules").addEventListener("click", rules.style.visibility = "salmon")
 }
 
 
