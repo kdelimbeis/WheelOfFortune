@@ -56,7 +56,7 @@ function letterSearch(myletter) {
 
 var word = "GUESSTHISWORD";
 var splitword = word.split('');
-splitword.forEach(myFunction);
+splitword.forEach(guessWord);
 console.log(splitword);
 
 for (var i = 0; i < splitword.length; i++) {
@@ -64,7 +64,7 @@ for (var i = 0; i < splitword.length; i++) {
 
 }
 
-function myFunction(item) {
+function guessWord(item) {
 
     var element = document.getElementById("container");
 
@@ -98,10 +98,21 @@ class Game {
 var game = new Game();
 game.beginGame()
 
+function beginGame() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    if (person != null) {
+        document.getElementById("player").innerHTML =
+        "Hello " + person + "! Good Luck!!";
+    }
+}
+
 
  function reload() {
     location.reload();
 }
 
+function seeRules() {
+    document.getElementsByClassName("rules")[0].addEventListener("click", #rules.style.display = "contents")
+}
 
 

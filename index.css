@@ -26,3 +26,8 @@ body{
 	width: 400px;
 }
 
+.rules {
+	font-size: 30px;
+	background-color: salmon;
+	display: none;
+}
