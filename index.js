@@ -112,7 +112,7 @@ function beginGame() {
 }
 
 function seeRules() {
-    document.getElementsByClassName("rules")[0].addEventListener("click", #rules.style.display = "contents")
+    document.getElementsByClassName("rules")[0].addEventListener("click", style.display = "green")
 }
 
 
