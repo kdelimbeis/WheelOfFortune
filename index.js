@@ -36,8 +36,17 @@ function letterSearch(myletter) {
     	if (arr[i].innerHTML === myletter){
     	console.log(arr[i])
     	arr[i].style.color = "orange";
-		}	
+		}
     }
+
+    var arr2 = document.getElementsByClassName("ltrs");
+
+    for (var i = 0; i < arr2.length; i++) {
+        if (arr2[i].innerHTML === myletter){
+        console.log(arr2[i])
+        arr2[i].style.color = "black";
+        }   
+    } 
 }
 
 
@@ -45,7 +54,7 @@ function letterSearch(myletter) {
 
 
 
-var word = "guessthisword";
+var word = "GUESSTHISWORD";
 var splitword = word.split('');
 splitword.forEach(myFunction);
 console.log(splitword);
@@ -69,3 +78,30 @@ function myFunction(item) {
     element.appendChild(para);
  					
     }
+
+function spinWheel() {
+    var x = document.getElementById("spin")
+    x.innerHTML = Math.floor((Math.random() * 100) + 1);
+}
+
+
+class Game {
+    constructor (){
+        
+    }
+
+    beginGame(){
+    alert("new game")
+    }
+}
+
+var game = new Game();
+game.beginGame()
+
+
+ function reload() {
+    location.reload();
+}
+
+
+
