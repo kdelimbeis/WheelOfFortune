@@ -90,21 +90,21 @@ class Game {
         
     }
 
-    beginGame(){
-    alert("new game")
-    }
-}
-
-var game = new Game();
-game.beginGame()
-
-function beginGame() {
+    beginGame() {
     var person = prompt("Please enter your name", "Harry Potter");
     if (person != null) {
         document.getElementById("player").innerHTML =
         "Hello " + person + "! Good Luck!!";
+        }
     }
+
+
+   
 }
+
+var game = new Game();
+
+
 
 
  function reload() {
