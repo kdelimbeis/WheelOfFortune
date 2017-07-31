@@ -1,4 +1,4 @@
-
+var points = 0;
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var toupper = alphabet.toUpperCase();
 var splitalphabet = toupper.split('')
@@ -24,8 +24,11 @@ function myAlphabet(item) {
 document.getElementById("submitletter").addEventListener("click",function(){
 
     var myletter = document.getElementById("typeletter").value;
+    if (myletter.length > 1){
+        myletter = myletter[0]
+        }
     letterSearch(myletter);
-    });
+});
 
 function letterSearch(myletter) {
 	console.log(myletter);
@@ -52,13 +55,11 @@ function letterSearch(myletter) {
         
         }
     }
-    var points = howMany * spin.innerHTML;
+    points += howMany * spinWheel();
     console.log(points);
    
      return score.innerHTML= points;
 }
-
- var score = document.getElementById("score");
 
 
 
@@ -84,8 +85,7 @@ function guessWord(item) {
     
     var node = document.createTextNode(item);
     para.appendChild(node);
-    element.appendChild(para);
- 					
+    element.appendChild(para);				
     }
 
 var spin = document.getElementById("spin");
@@ -122,8 +122,13 @@ var game = new Game();
     location.reload();
 }
 
-function seeRules() {
-    document.getElementById("rules").addEventListener("click", rules.style.visibility = "visible")
-}
 
+function seeRules() {
+    var rules = document.getElementById('rules');
+    if (rules.style.display === 'none') {
+        rules.style.display = 'inline-block';
+    } else {
+        rules.style.display = 'none';
+    }
+}
 
