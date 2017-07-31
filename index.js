@@ -51,8 +51,6 @@ function letterSearch(myletter) {
         arr2[i].style.color = "black";
         var howMany = howMany + 1;
         console.log(howMany);
-        } else{
-        
         }
     }
     points += howMany * spin.innerHTML;
