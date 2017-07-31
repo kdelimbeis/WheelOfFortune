@@ -1,3 +1,4 @@
+var words = ["ubiquitous","omnipotent","malcontent","silhouette","recognizance","reparations","inconsequential","valedictory","Metamorphosis","benevolent"]
 var points = 0;
 var guess = 4;
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
