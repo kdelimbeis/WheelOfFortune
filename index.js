@@ -54,6 +54,8 @@ function letterSearch(myletter) {
     }
     var points = howMany * spin.innerHTML;
     console.log(points);
+    var score = document.getElementById("score");
+     score.innerHTML= points;
 }
 
 
