@@ -1,4 +1,6 @@
 var words = ["ubiquitous","omnipotent","malcontent","silhouette","recognizance","reparations","inconsequential","valedictory","Metamorphosis","benevolent"]
+var randomValue = words[Math.floor(Math.random() * words.length)];
+console.log(randomValue)
 var points = 0;
 var guess = 4;
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -85,7 +87,7 @@ function letterSearch(myletter) {
 
 
 
-var word = "GUESSTHISWORD";
+var word = randomValue;
 var splitword = word.split('');
 splitword.forEach(guessWord);
 console.log(splitword);
