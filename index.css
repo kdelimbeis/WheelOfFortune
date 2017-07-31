@@ -33,3 +33,10 @@ body{
 	display: inline-block;
 	height: 65px;
 }
+
+#spin {
+	font-size: 30px;
+	background-color: salmon;
+	width: fixed 10px;
+	display: inline-block;
+}

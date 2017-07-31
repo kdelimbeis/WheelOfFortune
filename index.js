@@ -40,13 +40,20 @@ function letterSearch(myletter) {
     }
 
     var arr2 = document.getElementsByClassName("ltrs");
+    var howMany = 0;
 
     for (var i = 0; i < arr2.length; i++) {
         if (arr2[i].innerHTML === myletter){
-        console.log(arr2[i])
+        console.log(arr2[i]);
         arr2[i].style.color = "black";
-        }   
-    } 
+        var howMany = howMany + 1;
+        console.log(howMany);
+        } else{
+        
+        }
+    }
+    var points = howMany * spin.innerHTML;
+    console.log(points);
 }
 
 
@@ -79,9 +86,11 @@ function guessWord(item) {
  					
     }
 
+var spin = document.getElementById("spin");
 function spinWheel() {
-    var x = document.getElementById("spin")
-    x.innerHTML = Math.floor((Math.random() * 100) + 1);
+    
+    spin.innerHTML = Math.floor((Math.random() * 100) + 1);
+    return spin.innerHTML;
 }
 
 
@@ -91,7 +100,7 @@ class Game {
     }
 
     beginGame() {
-    var person = prompt("Please enter your name", "Harry Potter");
+    var person = prompt("Please enter your name");
     if (person != null) {
         document.getElementById("player").innerHTML =
         "Hello " + person + "! Good Luck!!";
