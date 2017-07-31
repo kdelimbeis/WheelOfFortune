@@ -55,7 +55,7 @@ function letterSearch(myletter) {
         
         }
     }
-    points += howMany * spinWheel();
+    points += howMany * spin.innerHTML;
     console.log(points);
    
      return score.innerHTML= points;
@@ -90,7 +90,6 @@ function guessWord(item) {
 
 var spin = document.getElementById("spin");
 function spinWheel() {
-    
     spin.innerHTML = Math.floor((Math.random() * 100) + 1);
     return spin.innerHTML;
 }
