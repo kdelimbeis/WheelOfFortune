@@ -1,4 +1,5 @@
 var points = 0;
+var guess = 4;
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var toupper = alphabet.toUpperCase();
 var splitalphabet = toupper.split('')
@@ -42,17 +43,38 @@ function letterSearch(myletter) {
 		}
     }
 
+
     var arr2 = document.getElementsByClassName("ltrs");
     var howMany = 0;
-
-    for (var i = 0; i < arr2.length; i++) {
-        if (arr2[i].innerHTML === myletter){
-        console.log(arr2[i]);
-        arr2[i].style.color = "black";
-        var howMany = howMany + 1;
-        console.log(howMany);
+    if (splitword.indexOf(myletter) > -1) {
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr2[i].innerHTML === myletter){
+            console.log(arr2[i]);
+            arr2[i].style.color = "black";
+            var howMany = howMany + 1;
+            console.log(howMany);
+            }
+        }
+    } else{
+        if (guess === 4) {
+            alert("you have 4 guesses remaining")
+            guess -= 1
+        } else if (guess === 3) {
+            alert("your have 3 guess remaining")
+            guess -= 1
+        } else if (guess === 2) {
+            alert("your have 2 guess remaining")
+            guess -= 1
+        } else if (guess === 1) {
+            alert("your have 1 guess remaining")
+            guess -= 1
+        } else {
+            alert("wrong, game over for you")
+            reload();
+            alert("Begin new game...")
         }
     }
+
     points += howMany * spin.innerHTML;
     console.log(points);
    
