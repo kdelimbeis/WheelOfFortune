@@ -1,8 +1,14 @@
 var words = ["ubiquitous","omnipotent","malcontent","silhouette","recognizance","reparations","inconsequential","valedictory","Metamorphosis","benevolent"]
-var randomValue = words[Math.floor(Math.random() * words.length)];
+var wordsUpper = [];
+for (var i = 0; i < words.length; i++) {
+   wordsUpper[i] = words[i].toUpperCase();
+}
+
+var randomValue = wordsUpper[Math.floor(Math.random() * wordsUpper.length)];
 console.log(randomValue)
 var points = 0;
 var guess = 4;
+
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var toupper = alphabet.toUpperCase();
 var splitalphabet = toupper.split('')
@@ -26,8 +32,8 @@ function myAlphabet(item) {
 
 
 document.getElementById("submitletter").addEventListener("click",function(){
-
-    var myletter = document.getElementById("typeletter").value;
+    var letter = document.getElementById("typeletter").value;
+    var myletter = letter.toUpperCase();
     if (myletter.length > 1){
         myletter = myletter[0]
         }
